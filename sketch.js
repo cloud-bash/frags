@@ -1,11 +1,27 @@
+let fr=5
+let p=1
+let inc=true
+
 function setup() {
-  frameRate(10)
+  frameRate(fr)
   createCanvas(900, 900);
 }
 
 function draw() {
    // creates a grid of squares
-  squares(5);
+  squares(p);
+  if(inc){
+    p++
+  } else {
+    p--
+  }
+  frameRate(22-p)
+  if(p == 20){
+    inc = !inc
+  }
+  if(p == 1){
+    inc = !inc
+  }
 }
 
 function squares(n){
