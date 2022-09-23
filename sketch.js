@@ -4,11 +4,12 @@ function setup() {
 
 function draw() {
   background(220);
-  //creates a grid of squares
+    //creates a grid of squares
   for(i=0;i<9;i++){
     x=(width/9)*i
     for(j=0;j<9;j++){
       y=(height/9)*j
+      fill((255/9)*i,(255/18)*(i+j),(255/9)*j)
       rect(x,y,width/9,height/9);
     }
   }
