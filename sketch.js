@@ -1,5 +1,6 @@
 let fr=5
-let p=1
+let start=5
+let p=start
 let inc=true
 
 function setup() {
@@ -10,16 +11,17 @@ function setup() {
 function draw() {
    // creates a grid of squares
   squares(p);
+  // p=sin(p)
   if(inc){
     p++
   } else {
     p--
   }
-  frameRate(22-p)
-  if(p == 20){
+  frameRate(20-p)
+  if(p == 15){
     inc = !inc
   }
-  if(p == 1){
+  if(p == start){
     inc = !inc
   }
 }
@@ -37,9 +39,11 @@ function squares(n){
       c=random(255);
       d=random(255);
       y=(height/n)*j
+      dx=width-(x/2)
+      dy=height-(y/2)
       //TODO: load images and get values for grid
       noStroke();
-      fill((a/(n/2))*j,(b/(n*2))*(i-j),(c/(n/2))*i,d)
+      fill(a,b,c,d)
       rect(x,y,width/n,height/n);
     }
   }
