@@ -1,5 +1,6 @@
-let fr=5
+let fr=2
 let start=5
+let max=12
 let p=start
 let inc=true
 
@@ -11,14 +12,13 @@ function setup() {
 function draw() {
    // creates a grid of squares
   squares(p);
-  // p=sin(p)
   if(inc){
     p++
   } else {
     p--
   }
-  frameRate(20-p)
-  if(p == 15){
+  frameRate(max+3-p)
+  if(p == max){
     inc = !inc
   }
   if(p == start){
