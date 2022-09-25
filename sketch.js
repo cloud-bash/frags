@@ -4,6 +4,12 @@ let max=6
 let p=start
 let inc=true
 
+function preload(){
+  img1 = loadImage("images/1.png");
+  img2 = loadImage("images/2.png");
+  img3 = loadImage("images/3.png");
+}
+
 function setup() {
   frameRate(fr)
   createCanvas(900, 900);
