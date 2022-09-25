@@ -1,6 +1,6 @@
-let fr=2
-let start=5
-let max=12
+let fr=1
+let start=3
+let max=7
 let p=start
 let inc=true
 
@@ -17,7 +17,7 @@ function draw() {
   } else {
     p--
   }
-  frameRate(max+3-p)
+  frameRate(max+1-p)
   if(p == max){
     inc = !inc
   }
