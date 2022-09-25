@@ -1,6 +1,6 @@
 let fr=1
-let start=3
-let max=7
+let start=1
+let max=6
 let p=start
 let inc=true
 
