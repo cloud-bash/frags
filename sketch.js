@@ -19,7 +19,7 @@ function setup() {
 }
 //cycles through a list of images
 function draw() {
-  background(255,128,64);
+  background(255);
   imglist = [img1,img2,img3]
 
   // image(imglist[i],0,0,900,900);
@@ -37,8 +37,15 @@ function draw() {
       y = j*height/p
       sizeY = height/p
       // posY = j*img.height/p
-      if(i%2==0 || j%2==0){
+      if(i%2==0 && j%2==0){
         image(img1,x,y,sizeX,sizeY,i*img1.width/p,j*img1.height/p,img1.width/p, img1.height/p);
+      } else if (i%2!=0 && j%2!=0){
+        image(img1,x,y,sizeX,sizeY,i*img1.width/p,j*img1.height/p,img1.width/p, img1.height/p);
+      }
+      if((i-1)%2==0 && (j-1)%2!=0){
+        image(img2,x,y,sizeX,sizeY,i*img2.width/p,j*img2.height/p,img2.width/p, img2.height/p);
+      } else if ((i-1)%2!=0 && (j)%2!=0){
+        image(img2,x,y,sizeX,sizeY,i*img2.width/p,j*img2.height/p,img2.width/p, img2.height/p);
       }
     }
   }
